@@ -116,6 +116,6 @@ export const Product_Manager = new ProductManager("./src/products.json");
 //Product_Manager.addproduct("Soquetes", "nylon", "$100", "aca va una imagen", 12, 4);
 
 //Muestro todos los productos
-//Product_Manager.getProducts() /muestra todos los productos con el comando node productManager.js
+//Product_Manager.getProducts() //muestra todos los productos con el comando node productManager.js
 
 
