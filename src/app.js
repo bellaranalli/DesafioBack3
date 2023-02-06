@@ -18,14 +18,14 @@ const app = express();
 app.get('/products', async (req, res) => {
     let totalProducts = await Product_Manager.getProducts();
     res.send(totalProducts)
+
 });
 
 app.get('/products/:productId', async (req, res) => {
     const id = req.params.productId
     let productsById = await Product_Manager.getProductById(id)
-        res.send(productsById)
-    })
-
+    res.send(productsById)
+})
 
 const port = 8080;
 app.listen(port, () => {
