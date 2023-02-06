@@ -1,6 +1,7 @@
 import express from "express";
 import { Product_Manager } from "./productManager.js";
 const app = express();
+app.use(express.urlencoded({ extended: true }))
 
 /*app.get('/products', (req, res) => {
     const { limit } = req.query
