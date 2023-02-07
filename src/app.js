@@ -42,4 +42,10 @@ app.listen(port, () => {
             x++
         }
         res.send(arraylimit)
-    }*/ //este método funciona para llamar a los objetos por límite pero si llamo a un número superior al objeto suma null.
+    } //este método funciona para llamar a los objetos por límite pero si llamo a un número superior al objeto suma null.
+
+    app.get('/products/:productId', async (req, res) => {
+        const id = parseInt(req.params.productId)
+        let productsById = await Product_Manager.getProductById(id)
+        res.send(productsById);
+    })*/ // método que toma los productos por id pero muestra error con el console.log de productManager.js
