@@ -50,7 +50,7 @@ class ProductManager {
         if (fs.existsSync("./Productos.json")) {
             let archivo = fs.readFileSync("./Productos.json", "utf-8")
             let contenido = JSON.parse(archivo)
-            console.log(contenido)
+            return contenido
         }
     }
 
@@ -60,10 +60,10 @@ class ProductManager {
             let producto = JSON.parse(Producto)
             if (producto.some(products => products.id == id)) {
                 let producto_buscado = producto.filter(products => products.id == id)
-                console.log(producto_buscado);
+                return producto_buscado;
             }
             else {
-                console.log("El producto no existe")
+                return ("El producto no existe")
             }
         }
     }
